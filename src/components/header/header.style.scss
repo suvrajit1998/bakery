@@ -1,0 +1,67 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .brand {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    font-weight: 800;
+    color: purple;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    padding-left: 30px;
+  }
+
+  .options {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .option {
+      width: 100px;
+      height: 25px;
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.685);
+      font-weight: 600;
+      transition: all 1s;
+      position: relative;
+      border: 1px solid black;
+      transition: all 0.4s;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, #e0dddd);
+        display: inline-block;
+        position: absolute;
+        transition: all 0.4s;
+        transform: translateX(10px);
+        top: 0;
+      }
+      &:hover {
+        &::after {
+          transform: translateX(-185px);
+        }
+      }
+    }
+  }
+}

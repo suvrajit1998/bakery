@@ -1,0 +1,13 @@
+.card-icon {
+  position: relative;
+
+  .shopping-logo {
+    height: 25px;
+  }
+
+  .item-count {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.5rem;
+  }
+}
