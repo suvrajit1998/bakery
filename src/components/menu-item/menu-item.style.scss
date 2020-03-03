@@ -120,3 +120,37 @@
     }
   }
 }
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModal__Overlay {
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  width: 500px;
+  height: 400px;
+  background: lightgray;
+  color: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  word-break: break-all;
+  padding: 2rem;
+  outline: none;
+}

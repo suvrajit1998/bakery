@@ -1,25 +1,36 @@
 import React from 'react'
 
+import { ReactComponent as Logo } from '../../assets/baker.svg'
+
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaGooglePlusG
+} from 'react-icons/fa'
+
 import './footer.style.scss'
 
 const Footer = () => {
   return (
     <div className="footer">
+      <Logo className="logo" />
       <div className="icons">
         <li className="facebook">
-          <i class="fab fa-facebook-f"></i>
+          <FaFacebookF />
         </li>
         <li className="twitter">
-          <i class="fab fa-twitter"></i>
+          <FaTwitter />
         </li>
         <li className="instagram">
-          <i class="fab fa-instagram"></i>
+          <FaInstagram />
         </li>
         <li className="youtube">
-          <i class="fab fa-youtube"></i>
+          <FaYoutube />
         </li>
         <li className="google">
-          <i class="fab fa-google-plus-g"></i>
+          <FaGooglePlusG />
         </li>
       </div>
       <div className="trems">

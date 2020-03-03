@@ -11,7 +11,9 @@ const HomePage = ({ sections }) => {
     <div className="home-page">
       <div className="heading">
         <h3 className="title">ORDER A CAKE FROM YOUR LOCAL BAKERY</h3>
-        <span className="subtitle">Personalized decorated cakes for every age</span>
+        <span className="subtitle">
+          Personalized decorated cakes for every age
+        </span>
       </div>
       {sections.map(section => {
         return <MenuItem key={section.id} section={section} />

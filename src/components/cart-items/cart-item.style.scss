@@ -1,0 +1,28 @@
+.cart-item {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  //   justify-content: center;
+  margin-bottom: 15px;
+
+  img {
+    width: 30%;
+    height: 100%;
+    // padding-right: 1rem;
+    border-radius: 100%;
+  }
+
+  .details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .close-logo {
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+}

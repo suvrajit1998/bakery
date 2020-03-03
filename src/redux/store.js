@@ -4,8 +4,8 @@ import logger from 'redux-logger'
 
 import rootreducer from './root.reducer'
 
-const middleware = [logger]
+const middlewares = [logger]
 
-const store = createStore(rootreducer, applyMiddleware(...middleware))
+const store = createStore(rootreducer, applyMiddleware(...middlewares))
 
 export default store

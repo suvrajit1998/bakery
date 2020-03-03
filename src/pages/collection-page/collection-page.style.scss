@@ -1,0 +1,13 @@
+.collection-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 5rem;
+
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

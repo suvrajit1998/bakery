@@ -1,0 +1,22 @@
+.card-dropdown {
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  background: lightgray;
+  z-index: 100;
+  top: 4rem;
+  right: 1rem;
+  padding: 0.5rem;
+
+  .card-item {
+    // width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .custom-button {
+    // bottom: -17rem;
+  }
+}
