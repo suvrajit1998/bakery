@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/bakery/static/css/main.ae56ed69.chunk.css",
+    "main.js": "/bakery/static/js/main.49cedf11.chunk.js",
+    "main.js.map": "/bakery/static/js/main.49cedf11.chunk.js.map",
+    "runtime-main.js": "/bakery/static/js/runtime-main.7590b9c1.js",
+    "runtime-main.js.map": "/bakery/static/js/runtime-main.7590b9c1.js.map",
+    "static/css/2.5dbdccff.chunk.css": "/bakery/static/css/2.5dbdccff.chunk.css",
+    "static/js/2.1a44c936.chunk.js": "/bakery/static/js/2.1a44c936.chunk.js",
+    "static/js/2.1a44c936.chunk.js.map": "/bakery/static/js/2.1a44c936.chunk.js.map",
+    "index.html": "/bakery/index.html",
+    "precache-manifest.b5d263a1e0746d5fd2bf81614d622a67.js": "/bakery/precache-manifest.b5d263a1e0746d5fd2bf81614d622a67.js",
+    "service-worker.js": "/bakery/service-worker.js",
+    "static/css/2.5dbdccff.chunk.css.map": "/bakery/static/css/2.5dbdccff.chunk.css.map",
+    "static/css/main.ae56ed69.chunk.css.map": "/bakery/static/css/main.ae56ed69.chunk.css.map",
+    "static/js/2.1a44c936.chunk.js.LICENSE": "/bakery/static/js/2.1a44c936.chunk.js.LICENSE",
+    "static/media/11.2 shopping-bag.svg.30f07071.svg": "/bakery/static/media/11.2 shopping-bag.svg.30f07071.svg",
+    "static/media/baker.e0e6a488.svg": "/bakery/static/media/baker.e0e6a488.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7590b9c1.js",
+    "static/css/2.5dbdccff.chunk.css",
+    "static/js/2.1a44c936.chunk.js",
+    "static/css/main.ae56ed69.chunk.css",
+    "static/js/main.49cedf11.chunk.js"
+  ]
+}
