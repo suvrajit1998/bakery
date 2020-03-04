@@ -3,7 +3,11 @@ import React from 'react'
 import './custom-button.style.scss'
 
 const CustomButoon = ({ children, ...props }) => {
-  return <div className="custom-button" {...props} > {children} </div>
+  return (
+    <button className="custom-button" {...props}>
+      {children}
+    </button>
+  )
 }
 
 export default CustomButoon

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
 import './sign-in.style.scss'
-import FormInput from '../sign-in/sign-in.component'
+import FormInput from '../form-input/form-input.component'
 import CustomButoon from '../custom-button/custom-button.component'
+
+import { signInWithGoogle, auth } from '../../firebase/firebase.utils'
 
 const SingIn = () => {
   const [userDetails, setUserDetails] = useState({ email: '', password: '' })
@@ -13,11 +15,22 @@ const SingIn = () => {
 
     setUserDetails({ ...userDetails, [name]: value })
   }
+
+  const onHandleSubmit = async e => {
+    e.preventDefault()
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password)
+      setUserDetails({ email: '', password: '' })
+    } catch (ex) {
+      console.log(ex)
+    }
+  }
   return (
     <div className="sign-in">
-      <h2>I already have an Account</h2>
+      <h2 className="title">I already have an Account</h2>
       <span>Sign in with your email and password</span>
-      <form>
+      <form className="form" onSubmit={onHandleSubmit}>
         <FormInput
           name="email"
           type="email"
@@ -36,7 +49,9 @@ const SingIn = () => {
         />
         <div className="button">
           <CustomButoon type="submit"> Sign In </CustomButoon>
-          <CustomButoon> Sign In With Google</CustomButoon>
+          <CustomButoon onClick={signInWithGoogle}>
+            Sign In With Google
+          </CustomButoon>
         </div>
       </form>
     </div>

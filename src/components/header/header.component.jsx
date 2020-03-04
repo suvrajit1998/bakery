@@ -6,10 +6,11 @@ import { connect } from 'react-redux'
 import { ReactComponent as Logo } from '../../assets/baker.svg'
 import CardIcon from '../dropdown-icon/dropdown-icon.components'
 import CardDropdown from '../card-dropdown/card-dropdown.components'
+import { auth } from '../../firebase/firebase.utils'
 
 import './header.style.scss'
 
-const Header = ({ hiddne }) => {
+const Header = ({ hiddne, currentUser }) => {
   // console.log(hiddne)
   return (
     <div className="header">
@@ -24,9 +25,15 @@ const Header = ({ hiddne }) => {
         <Link className="option" to="/contact">
           Contact
         </Link>
-        <Link className="option" to="/signin">
-          Sign In
-        </Link>
+        {currentUser ? (
+          <div className="option" onClick={() => auth.signOut()}>
+            Sign Out
+          </div>
+        ) : (
+          <Link className="option" to="/signin">
+            Sign In
+          </Link>
+        )}
         <CardIcon />
       </div>
       {hiddne ? null : <CardDropdown />}
@@ -34,8 +41,9 @@ const Header = ({ hiddne }) => {
   )
 }
 
-const mapStateToProps = ({ card }) => ({
-  hiddne: card.hiddne
+const mapStateToProps = state => ({
+  hiddne: state.card.hiddne,
+  currentUser: state.user.currentUser
 })
 
 export default connect(mapStateToProps)(Header)

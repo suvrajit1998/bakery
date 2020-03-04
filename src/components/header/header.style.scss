@@ -48,6 +48,7 @@
       border: 1px solid black;
       transition: all 0.4s;
       overflow: hidden;
+      cursor: pointer;
 
       &::after {
         content: '';

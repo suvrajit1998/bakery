@@ -23,7 +23,7 @@ const ItemMenu = ({ item, addItem }) => {
       </div>
       <div className="details">
         <h2 className="name"> {name} </h2>
-        <span className="price"> {price} </span>
+        <span className="price"> $ {price} </span>
         <CustomButoon
           onClick={() => {
             addItem(item)
