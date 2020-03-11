@@ -1,0 +1,27 @@
+.checkout {
+  position: relative;
+  top: 10rem;
+  width: 80%;
+  min-height: 170vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  .checkout-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid darkgray;
+
+    .checkout-block {
+      width: 23%;
+      text-transform: capitalize;
+
+      &:last-child {
+        width: 8%;
+      }
+    }
+  }
+}

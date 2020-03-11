@@ -1,4 +1,4 @@
-import { addToCard } from './card.utils.js'
+import { addToCard, removeItem } from './card.utils.js'
 
 const INITAIL_STATE = {
   hiddne: true,
@@ -23,6 +23,11 @@ const cardReducer = (state = INITAIL_STATE, action) => {
         cartItems: state.cartItems.filter(
           cartItem => cartItem.id !== action.payload.id
         )
+      }
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        cartItems: removeItem(state.cartItems, action.payload)
       }
     default:
       return state

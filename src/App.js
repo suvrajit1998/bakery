@@ -9,6 +9,8 @@ import Footer from './components/footer/footer.component'
 import SignInSignOut from './pages/sign-in-sign-out/sign-in-sign-out.component'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { setCurrentUser } from './redux/user/user.action'
+import { SignUpProvider } from './provider/signinSignout.provider'
+import CheckOut from './pages/checkout/checkout.components'
 
 import { Route, Switch, Redirect } from 'react-router-dom'
 
@@ -47,8 +49,17 @@ const App = ({ currentUser, setCurrentUser }) => {
         <Route path="/menu" component={Ourmenu} />
         <Route
           path="/signin"
-          render={() => (currentUser ? <Redirect to="/" /> : <SignInSignOut />)}
+          render={() =>
+            currentUser ? (
+              <Redirect to="/" />
+            ) : (
+              <SignUpProvider>
+                <SignInSignOut />
+              </SignUpProvider>
+            )
+          }
         />
+        <Route path="/checkout" component={CheckOut} />
       </Switch>
       <Footer />
     </div>

@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import './sign-up.style.scss'
 import FormInput from '../form-input/form-input.component'
 import CustomButoon from '../custom-button/custom-button.component'
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
+import { SignUpContext } from '../../provider/signinSignout.provider'
 
 const SignUp = () => {
+  const { toggleHiddne } = useContext(SignUpContext)
   const [userdetails, setuserdetails] = useState({
     displayName: '',
     email: '',
@@ -51,6 +53,7 @@ const SignUp = () => {
     <div className="sign-up">
       <h2 className="title">I have not a account</h2>
       <span className="subtitle">Sign up with your email and password</span>
+      <CustomButoon onClick={toggleHiddne}>Sign In ?</CustomButoon>
       <form className="sign-up-form" onSubmit={handlesubmit}>
         <FormInput
           type="text"

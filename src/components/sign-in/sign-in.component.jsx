@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import './sign-in.style.scss'
 import FormInput from '../form-input/form-input.component'
 import CustomButoon from '../custom-button/custom-button.component'
+import { SignUpContext } from '../../provider/signinSignout.provider'
 
 import { signInWithGoogle, auth } from '../../firebase/firebase.utils'
 
 const SingIn = () => {
+  const { toggleHiddne } = useContext(SignUpContext)
   const [userDetails, setUserDetails] = useState({ email: '', password: '' })
   const { email, password } = userDetails
 
@@ -30,6 +32,7 @@ const SingIn = () => {
     <div className="sign-in">
       <h2 className="title">I already have an Account</h2>
       <span>Sign in with your email and password</span>
+      <CustomButoon onClick={toggleHiddne}>Sign Up ?</CustomButoon>
       <form className="form" onSubmit={onHandleSubmit}>
         <FormInput
           name="email"

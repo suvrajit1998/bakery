@@ -1,12 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import './card-dropdown.style.scss'
 import CartItem from '../cart-items/cart-item.component'
 
 import CustomButoon from '../custom-button/custom-button.component'
+import { toggleCardHiddne } from '../../redux/card/card.action'
 
-const CardDropdown = ({ cartItems }) => {
+const CardDropdown = ({ cartItems, history, dispatch }) => {
   return (
     <div className="card-dropdown">
       <div className="card-item">
@@ -18,7 +20,14 @@ const CardDropdown = ({ cartItems }) => {
           <span>Your cart is empty!</span>
         )}
       </div>
-      <CustomButoon>CheckOut</CustomButoon>
+      <CustomButoon
+        onClick={() => {
+          history.push('/checkout')
+          dispatch(toggleCardHiddne())
+        }}
+      >
+        CheckOut
+      </CustomButoon>
     </div>
   )
 }
@@ -27,4 +36,4 @@ const mapStateToProps = ({ card: { cartItems } }) => ({
   cartItems
 })
 
-export default connect(mapStateToProps)(CardDropdown)
+export default withRouter(connect(mapStateToProps)(CardDropdown))
